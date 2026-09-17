@@ -1,37 +1,153 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Palestine.svg/1280px-Flag_of_Palestine.svg.png?utm_source=th.wikipedia.org&utm_campaign=index&utm_content=thumbnail" alt="HTML5 Icon" style="width:128px;height:128px;">
-
-</body>
-</html>
-
-<html>
 <head>
-<title>Palestine Explorer: Midterm Challenge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Palestine Explorer: Midterm Challenge</title>
 </head>
-<body>
 
-<h1>Palestine Explorer</h1>
-<p>welcom to Palestine Explorer.</p>
-<p>Palestine is a territory in the Middle East, located on the eastern coast of the Mediterranean Sea. It is currently divided into two main areas, separated by Israel: the West Bank, the eastern region bordering Jordan, and the Gaza Strip, a small coastal area in the southwest bordering Egypt.</p>
+<body id="top">
+    <header>
+        <svg class="site-logo" role="img" aria-labelledby="logo-title logo-description" viewBox="0 0 160 100"
+            xmlns="http://www.w3.org/2000/svg">
+            <title id="logo-title">Palestine Explorer logo</title>
+            <desc id="logo-description">A green circle containing a white compass and the initials P E.</desc>
+            <circle cx="80" cy="50" r="44" fill="#0b3d2e"></circle>
+            <path d="M80 20 L91 59 L80 79 L69 59 Z" fill="#ffffff"></path>
+            <text x="80" y="57" text-anchor="middle" font-size="16" font-family="Arial" fill="#ce1126">PE</text>
+        </svg>
+        <h1>Palestine Explorer</h1>
+        <nav aria-label="Main navigation">
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-button" aria-label="Open navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <a href="#top">Top</a>
+            <a href="#introduction">Introduction</a>
+            <a href="#governorates">Palestinian Governorates</a>
+            <a href="#contact">Contact</a>
+            <a href="#bottom">Bottom</a>
+        </nav>
+    </header>
 
+    <main>
+        <section id="introduction" class="intro">
+            <h2>Welcome to Palestine Explorer</h2>
+            <p>Palestine is a land rich in history, culture, and natural beauty. Explore its cities, traditions, and
+                important places.</p>
+            <a href="#governorates" class="cta-button">Explore the Governorates</a>
+        </section>
+
+    <h2>Culture</h2>
+    <p>Palestinian culture is rich in traditions, music, food, and hospitality. Common foods include maqluba, hummus,
+        and falafel, and family gatherings are an important part of daily life.</p>
+
+    <section id="governorates">
+        <h2>Palestinian Governorates</h2>
+
+        <div class="card-grid">
+            <article class="governorate-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Old%20City%20of%20Jerusalem.jpg"
+                    alt="Stone buildings in the Old City of Jerusalem">
+                <h3>Quds (Jerusalem)</h3>
+                <p>Quds is known for its historic Old City, important religious sites, and rich cultural heritage.</p>
+            </article>
+
+            <article class="governorate-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hebron%20old%20city.jpg"
+                    alt="Historic stone street in Hebron's old city">
+                <h3>Khaleel (Hebron)</h3>
+                <p>Khaleel is a historic city known for traditional markets, old stone buildings, and local crafts.</p>
+            </article>
+
+            <article class="governorate-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Jaffa%20port.jpg"
+                    alt="The historic harbor and stone buildings of Yafa">
+                <h3>Yafa (Jaffa)</h3>
+                <p>Yafa is a historic coastal city celebrated for its old harbor, architecture, and Mediterranean setting.</p>
+            </article>
+
+            <article class="governorate-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Khan%20Yunis.jpg"
+                    alt="A street scene in Khan Younus">
+                <h3>Khan Younus</h3>
+                <p>Khan Younus is a southern city with a long history, active communities, and strong cultural traditions.</p>
+            </article>
+
+            <article class="governorate-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rafah.jpg"
+                    alt="A landscape near the city of Rafah">
+                <h3>Rafah</h3>
+                <p>Rafah is a southern city known for its local history, community life, and location near the coast.</p>
+            </article>
+
+            <article class="governorate-card">
+                <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Gaza%20City.jpg"
+                    alt="Buildings and coastline in Gaza City">
+                <h3>Gaza</h3>
+                <p>Gaza is a coastal area with a long history, a strong cultural identity, and views of the Mediterranean Sea.</p>
+            </article>
+        </div>
+
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form action="#contact" method="post">
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <div>
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <div>
+                <label for="phone">Phone number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" pattern="[+]?[0-9 ()-]{7,20}"
+                    title="Enter a valid phone number." required>
+            </div>
+
+            <div>
+                <label for="email">Email address</label>
+                <input type="email" id="email" name="email" autocomplete="email"
+                    pattern="[A-Za-z0-9._%+-]+@ftu\.ac\.th" title="Use an email address ending in @ftu.ac.th."
+                    required>
+            </div>
+
+            <div>
+                <label for="secret-word">Secret word</label>
+                <input type="password" id="secret-word" name="secret-word" minlength="8"
+                    pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9]).{8,}"
+                    title="Use at least 8 characters with uppercase, lowercase, a number, and a special character."
+                    required>
+            </div>
+
+            <div>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" required></textarea>
+            </div>
+
+            <button type="submit">Send message</button>
+        </form>
+    </section>
+
+    </main>
+
+    <footer id="bottom">
+        <p>Thank you for visiting Palestine Explorer.</p>
+        <p>&copy; 2026 Palestine Explorer</p>
+        <p>Student: Darwish Sa-paing</p>
+        <a href="#top">Back to top</a>
+    </footer>
+    <h2>About Me</h2>
+    <h3>Name:Darwish sa-paing</h3>
 </body>
-</html>
 
-<html>
-<head>
-<style>
-body {
-  background-color: lightblue;
-}
-</style>
-</head>
-<body>
-
-<html>
-<body>
-<p>Name:Darwish sa-paing</p>
-</body>
 </html>
